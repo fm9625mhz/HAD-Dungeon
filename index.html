@@ -1740,6 +1740,7 @@
       <button type="button" class="tab-btn active" data-tab="view-game">🎮 ฝ่าดันเจี้ยนยาอันตราย (HAD Dungeon: Survival)</button>
       <button type="button" class="tab-btn" data-tab="view-leaderboard">🏆 ทำเนียบผู้พิชิต (Leaderboard)</button>
       <button type="button" class="tab-btn" data-tab="view-ref">📘 คัมภีร์เวท HAD (64 รายการ)</button>
+      <button type="button" class="tab-btn" data-tab="view-manual">📖 คู่มือวิธีการเล่น (Game Manual)</button>
       <button type="button" class="tab-btn" data-tab="view-analytics">📊 สถิติหลังบ้าน (GamesMaster Dashboard)</button>
     </nav>
   </header>
@@ -2158,6 +2159,103 @@
             </thead>
             <tbody id="spellbook-tbody"></tbody>
           </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 5: GAME MANUAL -->
+    <section id="view-manual" class="view-section">
+      <div class="panel-card" style="line-height: 1.6;">
+        <h2 style="margin-top:0; color:var(--rpg-gold-bright); display:flex; align-items:center; gap:8px;">
+          <span>📖</span> คู่มือแนะนำการเล่นและสารานุกรมผู้พิทักษ์ยา (Adventure Guide & Game Manual)
+        </h2>
+        <p style="color:var(--muted); margin-bottom:20px;">เรียนรู้กฎกติกา กลไกความสมดุล และระบบช่วยชีวิตต่าง ๆ ในหอคอย HAD Dungeon 50 ชั้น ของโรงพยาบาลหัวหิน</p>
+        
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+          
+          <!-- 1. How to Play -->
+          <div style="background:#FFFDF5; border:1.5px solid var(--rpg-border); border-radius:12px; padding:16px;">
+            <h3 style="margin-top:0; color:var(--brand-red-dark);">🏰 1. ปฐมบทการเดินทาง (How to Play)</h3>
+            <p style="font-size:14px; color:var(--muted);">เกมนี้เป็นสัญญาณการประเมินทักษะยาความเสี่ยงสูง (HAD) ของ รพ.หัวหิน โดยผู้เล่นต้องไต่หอคอยรวม <strong>50 ชั้น</strong></p>
+            <ul style="font-size:13.5px; padding-left:20px; color:var(--ink); margin: 6px 0 0;">
+              <li><strong>โครงสร้าง Progressive:</strong> ความยากของคำถามจะเพิ่มขึ้นอัตโนมัติตามระดับชั้น (ชั้น 1-17 ระดับง่าย, ชั้น 18-34 ระดับกลาง, ชั้น 35-50 ระดับยากสุดโหด)</li>
+              <li><strong>ระบบ Checkpoint (ด่านบอส):</strong> ทุกๆ 5 ชั้น (เช่น 5, 10, 15, ..., 50) จะพบกับบอสประจำจุดพัก ซึ่งมีพลังชีวิตมากกว่ามอนสเตอร์ทั่วไป</li>
+              <li><strong>การฟื้นพลังชีวิต (No Auto-Refill):</strong> พลังชีวิต (HP) และพลังสมาธิ (MP) จะไม่มีการฟื้นฟูอัตโนมัติเมื่อผ่านแต่ละชั้น ผู้เล่นต้องประเมินและฟื้นฟูด้วยตนเองด้วยยาพกพาและสกิลกู้ชีพ</li>
+            </ul>
+          </div>
+
+          <!-- 2. Character Classes -->
+          <div style="background:#FFFDF5; border:1.5px solid var(--rpg-border); border-radius:12px; padding:16px;">
+            <h3 style="margin-top:0; color:var(--brand-blue-dark);">🧙‍♂️ 2. สายอาชีพผู้พิทักษ์ (Character Classes)</h3>
+            <p style="font-size:14px; color:var(--muted);">เลือกสายอาชีพที่มีความสามารถเริ่มต้นและจุดเด่นด้านทรัพยากรแตกต่างกันเพื่อความได้เปรียบ:</p>
+            <ul style="font-size:13.5px; padding-left:20px; color:var(--ink); margin: 6px 0 0;">
+              <li><strong>🧙‍♂️ มหาจอมเวทโอสถ (Pill Archmage):</strong> เริ่มต้นด้วยค่าพลังสมาธิ MP สูงสุดเป็นพิเศษ <strong>120 MP</strong> (คลาสอื่นมี 100 MP) เหมาะกับการเน้นกดใช้สกิล</li>
+              <li><strong>🛡️ อัศวินเกราะโอสถพิทักษ์ (Aegis Pill Knight):</strong> เริ่มต้นด้วยค่าพลังชีวิต HP สูงสุดเป็นพิเศษ <strong>140 HP</strong> (คลาสอื่นมี 100 HP) ปลอดภัยและทนทานความเสียหายได้ดีขึ้น</li>
+              <li><strong>🗡️ จอมโจรคัดยาไว (Swift Pill Rogue):</strong> คลาสผู้พิทักษ์สายว่องไว ได้รับบัฟส่วนลดค่าร่ายมานาของสกิลติดตัวลง <strong>-5 MP ทุกสกิล!</strong> ทำให้ร่ายสกิลได้ถี่และประหยัดขึ้น</li>
+            </ul>
+          </div>
+
+          <!-- 3. Active Skills -->
+          <div style="background:#FFFDF5; border:1.5px solid var(--rpg-border); border-radius:12px; padding:16px;">
+            <h3 style="margin-top:0; color:var(--rpg-gold-bright);">🔮 3. คัมภีร์เวทมนตร์พิทักษ์ชีพ (Active Skills & Magic)</h3>
+            <p style="font-size:14px; color:var(--muted);">ผู้เล่นสามารถร่ายมนตรากู้ชีพโดยใช้ MP เป็นค่าร่ายได้ตลอดเวลา:</p>
+            <ul style="font-size:13.5px; padding-left:20px; color:var(--ink); margin: 6px 0 0;">
+              <li><strong>🛡️ โล่ป้องกัน (Aegis Barrier):</strong> สร้างโล่เวทมนตร์คลุมกาย ป้องกันความเสียหายเฉียบพลันหากตอบผิดในข้อถัดไปได้ 1 ครั้ง (ร่ายปกติใช้ 15 MP)</li>
+              <li><strong>👁️ เนตรวิเคราะห์ (Analyze 50/50):</strong> ร่ายมนตร์คัดกรองใบสั่งยา ตัดตัวเลือกหลอกที่ผิดออกไปทันที 2 ตัวเลือก เหลือ 2 ตัวเลือกเพื่อช่วยให้ตัดสินใจได้แม่นยำขึ้น (ร่ายปกติใช้ 25 MP)</li>
+              <li><strong>🧪 โอสถพิทักษ์ (Standard Heal):</strong> ร่ายมนตรากู้ชีพเพื่อฟื้นพลังชีวิตผู้พิทักษ์ทันที <strong>+25 HP</strong> (ร่ายปกติใช้ 20 MP)</li>
+            </ul>
+          </div>
+
+          <!-- 4. Quick Pouch Items -->
+          <div style="background:#FFFDF5; border:1.5px solid var(--rpg-border); border-radius:12px; padding:16px;">
+            <h3 style="margin-top:0; color:#059669;">🎒 4. กระเป๋ายาพกพากู้ชีพ (Quick Pouch Items)</h3>
+            <p style="font-size:14px; color:var(--muted);">ไอเทมพกพาฉุกเฉินที่สะสมได้ระหว่างต่อสู้ (สไลม์ทั่วไปมีโอกาสดรอป 10% และบอส Checkpoint 35% พกได้สูงสุดอย่างละ 2 ชิ้น):</p>
+            <ul style="font-size:13.5px; padding-left:20px; color:var(--ink); margin: 6px 0 0;">
+              <li><strong>🧪 น้ำยา D-50-W (50% Glucose):</strong> กดใช้เพื่อเติมพลังชีวิตฉุกเฉินทันที <strong>+40 HP</strong> โดยไม่ใช้ค่ามานา MP</li>
+              <li><strong>💧 สารน้ำ NSS Flush (Normal Saline):</strong> กดใช้เพื่อเติมสมาธิฟื้นฟูทันที <strong>+35 MP</strong> สำหรับใช้ร่ายเวทกู้ชีพฉุกเฉินต่อทันที</li>
+            </ul>
+          </div>
+
+          <!-- 5. Overdrive Mode -->
+          <div style="background:#FFFDF5; border:1.5px solid var(--rpg-border); border-radius:12px; padding:16px;">
+            <h3 style="margin-top:0; color:#EA580C;">🔥 5. โหมด Overdrive (เกจไม้ตายเภสัชกร)</h3>
+            <p style="font-size:14px; color:var(--muted);">เมื่อผู้เล่นสะสมสมาธิจากการตอบคำถามถูกต้องครบถ้วนจะเข้าสู่โหมดคลั่ง:</p>
+            <ul style="font-size:13.5px; padding-left:20px; color:var(--ink); margin: 6px 0 0;">
+              <li><strong>การสะสมเกจ:</strong> ตอบคำถามถูกต้องติดต่อกันเพื่อสะสมหลอด Overdrive 5 ช่องลอยเหนือศีรษะ (ตอบถูก 1 ข้อ = เติมเกจ 20% หรือ 1 ช่อง)</li>
+              <li><strong>สิทธิประโยชน์โหมดคลั่ง:</strong> เมื่อหลอด Overdrive เต็ม 100% ตัวละครจะเข้าสู่สถานะคลั่งนาน 2 ข้อต่อสู้ทันที โดยการโจมตีจะแรงขึ้น 2 เท่า (<strong>ดาเมจ 100 HP</strong> จากปกติ 50 HP) และ <strong>สามารถกดร่ายสกิลเวทมนตร์กู้ชีพทุกประเภทได้ฟรี 0 MP!</strong></li>
+            </ul>
+          </div>
+
+          <!-- 6. Rank Tiers -->
+          <div style="background:#FFFDF5; border:1.5px solid var(--rpg-border); border-radius:12px; padding:16px;">
+            <h3 style="margin-top:0; color:#854D0E;">🎖️ 6. ลำดับยศผู้พิทักษ์ยาความเสี่ยงสูง (10 Rank Tiers)</h3>
+            <p style="font-size:14px; color:var(--muted);">ยศผู้พิทักษ์จะได้รับการอัปเกรดแบบอัตโนมัติเมื่อท่านไต่ขึ้นหอคอยชั้นที่กำหนดตามเกณฑ์ความรู้ รพ.หัวหิน:</p>
+            <table style="font-size:12.5px; width:100%; border-collapse:collapse; margin-top:8px;">
+              <tr style="background:#FAF8F2;"><th style="padding:4px; border-bottom:1px solid #E2E8F0; text-align:left;">ชั้นที่</th><th style="padding:4px; border-bottom:1px solid #E2E8F0; text-align:left;">ยศพิทักษ์โอสถ</th></tr>
+              <tr><td style="padding:3px;">ชั้น 1–4</td><td style="font-weight:bold; color:var(--brand-red-dark);">🏷️ ทหารใหม่ฉลากแดง</td></tr>
+              <tr><td style="padding:3px;">ชั้น 5–9</td><td style="font-weight:bold; color:var(--rpg-emerald);">📦 ผู้พิทักษ์จุดแยกเก็บ</td></tr>
+              <tr><td style="padding:3px;">ชั้น 10–14</td><td style="font-weight:bold; color:var(--brand-blue-dark);">🔍 นักรบคัดแยกชื่อพ้อง</td></tr>
+              <tr><td style="padding:3px;">ชั้น 15–19</td><td style="font-weight:bold; color:#D97706;">🛡️ อัศวินตรวจซ้ำสองชั้น</td></tr>
+              <tr><td style="padding:3px;">ชั้น 20–24</td><td style="font-weight:bold; color:var(--brand-red);">🧰 ผู้คุมกล่องกู้ชีพฉุกเฉิน</td></tr>
+              <tr><td style="padding:3px;">ชั้น 25–29</td><td style="font-weight:bold; color:var(--rpg-purple);">🧪 จอมเวทผสมดริปแม่นยำ</td></tr>
+              <tr><td style="padding:3px;">ชั้น 30–34</td><td style="font-weight:bold; color:#06B6D4;">💉 ผู้พิชิตวิกฤตสารน้ำรั่ว</td></tr>
+              <tr><td style="padding:3px;">ชั้น 35–39</td><td style="font-weight:bold; color:#854D0E;">⚗️ มหาปราชญ์ยาต้านพิษ</td></tr>
+              <tr><td style="padding:3px;">ชั้น 40–49</td><td style="font-weight:bold; color:#312E81;">⚔️ แม่ทัพพิทักษ์หัวใจวิกฤต</td></tr>
+              <tr><td style="padding:3px;">ชั้น 50</td><td style="font-weight:bold; color:#B45309;">👑 ราชันย์ผู้พิทักษ์โอสถ รพ.หัวหิน</td></tr>
+            </table>
+          </div>
+
+          <!-- 7. Spellbook & CPR Box Interactive -->
+          <div style="background:#FFFDF5; border:1.5px solid var(--rpg-border); border-radius:12px; padding:16px; grid-column:1 / -1;">
+            <h3 style="margin-top:0; color:#4C1D95;">📘 7. ระบบคัมภีร์เวท HAD & ตู้ยาฉุกเฉินกู้ชีพ CPR Box</h3>
+            <p style="font-size:14px; color:var(--muted);">คลังความรู้และการฝึกซ้อมภาคทฤษฎีเพื่อทบทวนความพร้อมก่อนขึ้นปฏิบัติหน้าที่จริง:</p>
+            <ul style="font-size:13.5px; padding-left:20px; color:var(--ink); display:grid; grid-template-columns:1fr 1fr; gap:10px; margin: 6px 0 0;">
+              <li><strong>ตารางคัมภีร์ HAD 64 รายการ:</strong> บันทึกข้อมูลและแนวทางบริหารยาความเสี่ยงสูง 64 ตัวหลักของ รพ.หัวหิน คลิกเพื่อดูป๊อปอัปสรุป 6 ด้านหลัก และใช้งาน <strong>AI ผู้ช่วยตอบคำถามรายตัวยา</strong> เพื่อสืบค้นข้อมูลได้ทันที</li>
+              <li><strong>ผังตู้ยา CPR Box 14 รายการ:</strong> แผนผังจำลองกล่อง Crash Cart มาตรฐาน รพ.หัวหิน แยกสีแดง 🔴 ชัดเจนสติกเกอร์ HAD สำหรับยา 11 รายการ และสีน้ำเงิน 🔵 สำหรับยา Non-HAD 3 รายการ</li>
+              <li><strong>มินิเกมฝึกจัด CPR Box:</strong> เกมสุ่มทดสอบกล้ามเนื้อสมอง จำลองสถานการณ์ถามสต็อกสำรอง ยารหัส และตำแหน่งจัดเก็บ เสริมทักษะ Muscle Memory ป้องกันการหยิบพลาดวินาทีวิกฤต</li>
+            </ul>
+          </div>
+          
         </div>
       </div>
     </section>
